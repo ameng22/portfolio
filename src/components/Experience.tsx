@@ -29,7 +29,7 @@ const Experience = () => {
     },
     {
       company: "Freelancer",
-      location: "London, ON",
+      location: "North York, ON",
       role: "Web and Software Developer",
       period: "June 2023 - December 2024",
       achievements: [
