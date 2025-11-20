@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Professional dark theme */
+    --background: 220 20% 10%;
+    --foreground: 210 15% 90%;
+
+    --card: 220 18% 14%;
+    --card-foreground: 210 15% 90%;
+
+    --popover: 220 18% 14%;
+    --popover-foreground: 210 15% 90%;
+
+    /* Muted blue primary - Professional */
+    --primary: 215 20% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Dark surface for cards */
+    --secondary: 220 16% 18%;
+    --secondary-foreground: 210 15% 90%;
+
+    --muted: 220 15% 22%;
+    --muted-foreground: 215 12% 60%;
+
+    /* Subtle teal accent */
+    --accent: 180 15% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 24%;
+    --input: 220 15% 24%;
+    --ring: 215 20% 50%;
+
+    --radius: 0.5rem;
+
+    /* Subtle design tokens */
+    --gradient-card: linear-gradient(180deg, hsl(220 18% 14%) 0%, hsl(220 16% 12%) 100%);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "kern" 1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary via-primary to-accent bg-clip-text text-transparent;
+  }
+  
+  .card-gradient {
+    background: var(--gradient-card);
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+}
