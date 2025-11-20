@@ -39,18 +39,25 @@ To run this project locally:
     npm run build
     ```
 
-## Building for Production
+## Deployment
 
-To create a production build:
+This project is configured to automatically deploy to GitHub Pages using GitHub Actions.
 
-1.  **Run the build command**
-    ```bash
-    npm run build
-    ```
+### Prerequisites
 
-2.  **Locate the output**
-    The build artifacts will be generated in the `dist` directory.
+1.  **Push to GitHub**
+    Ensure your code is pushed to a GitHub repository.
 
-3.  **Deploy**
-    You can deploy the contents of the `dist` folder to any static hosting service (GitHub Pages, Vercel, Netlify, etc.).
+2.  **Configure GitHub Pages Source**
+    -   Go to your repository on GitHub.
+    -   Navigate to **Settings** > **Pages**.
+    -   Under **Build and deployment** > **Source**, select **GitHub Actions**.
+    -   The workflow should automatically pick up the configuration.
+
+### Manual Deployment (Optional)
+
+If you prefer to build manually:
+
+1.  Run `npm run build`
+2.  The `dist` folder contains the production build.
 
