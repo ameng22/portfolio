@@ -38,3 +38,19 @@ To run this project locally:
     ```bash
     npm run build
     ```
+
+## Building for Production
+
+To create a production build:
+
+1.  **Run the build command**
+    ```bash
+    npm run build
+    ```
+
+2.  **Locate the output**
+    The build artifacts will be generated in the `dist` directory.
+
+3.  **Deploy**
+    You can deploy the contents of the `dist` folder to any static hosting service (GitHub Pages, Vercel, Netlify, etc.).
+
